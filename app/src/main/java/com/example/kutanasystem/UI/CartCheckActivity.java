@@ -230,22 +230,22 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
         }
         else if(id==R.id.fruits){
             Intent intent =new Intent(CartCheckActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Fruits");
+            intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
         else if(id==R.id.vegetables){
             Intent intent =new Intent(CartCheckActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Vegetables");
+            intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
         else if(id==R.id.meats){
             Intent intent =new Intent(CartCheckActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Meats");
+            intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
         else if(id==R.id.electronics){
             Intent intent =new Intent(CartCheckActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Electronics");
+            intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);
         }
         else if(id==R.id.Logout){

@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Electronics");
+        gridlayouttitle.setText("Photography and Tech");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Electronics");
+                intent.putExtra("Category Name","Photography and Tech");
                 startActivity(intent);
             }
         });
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Fruits");
+        gridlayouttitle.setText("Food and Drinks");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Fruits");
+                intent.putExtra("Category Name","Food and Drinks");
                 startActivity(intent);
             }
         });
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Meats");
+        gridlayouttitle.setText("Party Extras");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Meats");
+                intent.putExtra("Category Name","Party Extras");
                 startActivity(intent);
             }
         });
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Vegetables");
+        gridlayouttitle.setText("Lighting and Sound");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Vegetables");
+                intent.putExtra("Category Name","Lighting and Sound");
                 startActivity(intent);
             }
         });
@@ -360,22 +360,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id==R.id.fruits){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Fruits");
+            intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
         else if(id==R.id.vegetables){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Vegetables");
+            intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
         else if(id==R.id.meats){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Meats");
+            intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
         else if(id==R.id.electronics){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Electronics");
+            intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);
         }
         else if (id == R.id.Logout) {
@@ -456,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         PageTitle =(TextView)findViewById(R.id.PageTitle);
         CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
 
-        PageTitle.setText("بقالة");
+        PageTitle.setText("Kutana Planner");
         setNumberOfItemsInCartIcon();
 
         CustomCartContainer.setOnClickListener(new View.OnClickListener() {

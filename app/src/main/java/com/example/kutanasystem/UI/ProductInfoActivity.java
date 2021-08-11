@@ -263,27 +263,27 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.child("Fruits").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Fruits");
+                            PCategory.setText("Category: Food and Drinks");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
                     for(DataSnapshot dataSnapshot : snapshot.child("Electronics").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Electronics");
+                            PCategory.setText("Category: Lighting and Sound");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
 
                     for(DataSnapshot dataSnapshot : snapshot.child("Meats").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Meats");
+                            PCategory.setText("Category: Party Extras");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
 
                     for(DataSnapshot dataSnapshot : snapshot.child("Vegetables").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Vegetables");
+                            PCategory.setText("Category: Photography and Tech");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
@@ -364,22 +364,22 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
         }
         else if(id==R.id.fruits){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Fruits");
+            intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
         else if(id==R.id.vegetables){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Vegetables");
+            intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
         else if(id==R.id.meats){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Meats");
+            intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
         else if(id==R.id.electronics){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Electronics");
+            intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);
         }
         else if(id==R.id.Logout){
