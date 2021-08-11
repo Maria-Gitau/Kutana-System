@@ -133,6 +133,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
+        lastmodels.add(new HorizontalProductModel("https://407261-1281864-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/10/Nikon-D3500-DSLR-Camera-with-18-55mm-Lens.jpg",
+                "Camera",
+                "50,000",
+                false,
+                ""));
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
         m = FirebaseDatabase.getInstance().getReference().child("product").child("Electronics");
@@ -195,8 +200,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
-        final GridproductAdapter my_adapter;
-        my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
+        lastmodels.add(new HorizontalProductModel("https://m.media-amazon.com/images/I/51uJdR27f7L.jpg",
+                "Coke",
+                "200",
+                false,
+                ""));
         m = FirebaseDatabase.getInstance().getReference().child("product").child("Fruits");
         ValueEventListener eventListener = new ValueEventListener() {
 
@@ -208,6 +216,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     my_user.setCategory(ds.getKey().toString());
                     lastmodels.add(new HorizontalProductModel(my_user.getImage(), my_user.getCategory(), my_user.getPrice(), false,my_user.getExpired()));
                 }
+                GridproductAdapter my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
                 gv.setAdapter(my_adapter);
             }
 
@@ -236,6 +245,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
+        lastmodels.add(new HorizontalProductModel("https://m.media-amazon.com/images/I/91HnLmz7bsL._AC_SL1500_.jpg",
+                "JBL",
+                "20,000",
+                false,
+                ""));
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
         m = FirebaseDatabase.getInstance().getReference().child("product").child("Meats");
@@ -277,6 +291,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
+        lastmodels.add(new HorizontalProductModel("https://ak.picdn.net/shutterstock/videos/1024370081/thumb/1.jpg",
+                "Neon",
+                "50,000",
+                false,
+                ""));
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
         m = FirebaseDatabase.getInstance().getReference().child("product").child("Vegetables");
