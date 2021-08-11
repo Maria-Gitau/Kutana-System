@@ -68,7 +68,7 @@ public class AdminSalesManAdapter extends RecyclerView.Adapter<AdminSalesManAdap
         holder.cardView.setAnimation(AnimationUtils.loadAnimation(context , R.anim.fade_scale_animation));
         Picasso.get().load(salesManList.get(position).getImg()).centerCrop().fit().into(holder.img);
         holder.name.setText("Name: "+salesManList.get(position).getName());
-        holder.salary.setText("Salary: "+salesManList.get(position).getSalary()+" EGP");
+        holder.salary.setText("Salary: "+salesManList.get(position).getSalary()+" KES");
     }
 
 
