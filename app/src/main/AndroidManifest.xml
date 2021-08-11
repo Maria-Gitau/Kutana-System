@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kutanasystem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".UI.OfflineCapability"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KutanaSystem">
+
+        <activity
+            android:name=".UI.ScanQRCodeActivity"
+            android:parentActivityName=".UI.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.CartCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.EditSalesMan"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.EditProduct"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.EditOffer"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.favourites_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.ProductInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AddSalesMan"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AddOffer"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AddProduct"
+            android:parentActivityName=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.KutanaSystem.FullScreen" />
+        <activity
+            android:name=".UI.loginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+    </application>
+
+</manifest>

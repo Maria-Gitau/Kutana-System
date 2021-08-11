@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kutana Planner</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="cart">Cart</string>
+    <string name="my_orders">My Orders</string>
+    <string name="logout">Logout</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="Gmail_web_client_id">395485540295-8a6udlrhhhi2m9f8vracudrvpllh3lmk.apps.googleusercontent.com</string>
+
+    <string-array name="productstypes">
+        <item>Food and Drinks</item>
+        <item>Lighting and Sound</item>
+        <item>Party Extras</item>
+        <item>Photography and Tech</item>
+    </string-array>
+</resources>
