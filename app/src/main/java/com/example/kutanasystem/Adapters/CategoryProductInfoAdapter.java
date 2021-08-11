@@ -79,7 +79,7 @@ public class CategoryProductInfoAdapter extends RecyclerView.Adapter<CategoryPro
 
         Picasso.get().load(product.getProductImage()).into(holder.ProductImage);
         holder.ProductName.setText(product.getProductName());
-        holder.ProductPrice.setText("Price: "+product.getProductPrice()+" EGP");
+        holder.ProductPrice.setText("Price: "+product.getProductPrice()+" KES");
         holder.ProductExpiryDate.setText("Expiry Date: "+product.getProductExpiryDate());
 
         if(product.getProductExpiryDate().equalsIgnoreCase("null")) holder.ProductExpiryDate.setVisibility(View.INVISIBLE);
@@ -111,7 +111,7 @@ public class CategoryProductInfoAdapter extends RecyclerView.Adapter<CategoryPro
                     DatabaseReference x= FirebaseDatabase.getInstance().getReference().child("favourites").child(UserId).child(product.getProductName());
                     x.child("checked").setValue(true);
                     x.child("productimage").setValue(product.getProductImage());
-                    x.child("productprice").setValue("EGP "+product.getProductPrice());
+                    x.child("productprice").setValue("KES "+product.getProductPrice());
                     x.child("producttitle").setValue(product.getProductName());
 
                 }
