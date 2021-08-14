@@ -46,7 +46,9 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="305dp">
+                    android:layout_height="305dp"
+                    android:visibility="gone"
+                    >
 
                     <androidx.viewpager.widget.ViewPager
                         android:id="@+id/cardview"
