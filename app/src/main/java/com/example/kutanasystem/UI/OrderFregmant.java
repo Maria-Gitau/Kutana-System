@@ -89,10 +89,10 @@ public class OrderFregmant extends Fragment {
                         String products="Products :\n";
                         for (DataSnapshot data : dataSnapshot.child("orderproducts").getChildren())
                         {
-                            products+= "    #"+data.getKey() + "\n        Price: " + data.child("productPrice").getValue().toString() + " EGP\n        Quantity: " + data.child("quantity").getValue().toString()+"\n";
+                            products+= "    #"+data.getKey() + "\n        Price: " + data.child("productPrice").getValue().toString() + " KES\n        Quantity: " + data.child("quantity").getValue().toString()+"\n";
                         }
 
-                        orderItemList.add( new MyorderModel(dataSnapshot.getKey(),"   Date :  " + Date ,"   Products Number :  "+String.valueOf(nums),"   Total Price :  "+ totalPrice+" EGP" , "   "+products,OrderCheck));
+                        orderItemList.add( new MyorderModel(dataSnapshot.getKey(),"   Date :  " + Date ,"   Products Number :  "+String.valueOf(nums),"   Total Price :  "+ totalPrice+" KES" , "   "+products,OrderCheck));
                     }
                 }
                 else{

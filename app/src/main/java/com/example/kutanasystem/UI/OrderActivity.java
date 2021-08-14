@@ -135,22 +135,22 @@ public class OrderActivity extends AppCompatActivity implements NavigationView.O
         else if(id == R.id.Cart){
             startActivity(new Intent(OrderActivity.this, CartActivity.class));
         }
-        else if(id==R.id.fruits){
+        else if(id==R.id.food){
             Intent intent =new Intent(OrderActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
-        else if(id==R.id.vegetables){
+        else if(id==R.id.lighting){
             Intent intent =new Intent(OrderActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
-        else if(id== R.id.meats){
+        else if(id== R.id.party){
             Intent intent =new Intent(OrderActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
-        else if(id==R.id.electronics){
+        else if(id==R.id.photography){
             Intent intent =new Intent(OrderActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);

@@ -150,7 +150,7 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
                     DatabaseReference x= FirebaseDatabase.getInstance().getReference().child("favourites").child(UserId).child(ProductName);
                     x.child("checked").setValue(true);
                     x.child("productimage").setValue(ProductImage);
-                    x.child("productprice").setValue("EGP "+ProductPrice);
+                    x.child("productprice").setValue("KES "+ProductPrice);
                     x.child("producttitle").setValue(ProductName);
 
                 }
@@ -237,14 +237,14 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
 
         if(IsOffered.equalsIgnoreCase("yes")){
             int PriceAfterOffer = (int) ((Integer.valueOf(ProductPrice)) - (Integer.valueOf(ProductPrice)*0.3));
-            PPrice.setText("Price: "+PriceAfterOffer+" EGP");
-            OldPrice. setText(ProductPrice+" EGP");
+            PPrice.setText("Price: "+PriceAfterOffer+" KES");
+            OldPrice. setText(ProductPrice+" KES");
             OfferRate.setText("- 30%");
             OldPrice.setPaintFlags(OldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
         else{
             OfferContainer.setVisibility(View.GONE);
-            PPrice.setText("Price: "+ProductPrice+" EGP");
+            PPrice.setText("Price: "+ProductPrice+" KES");
         }
 
 
@@ -261,27 +261,27 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    for(DataSnapshot dataSnapshot : snapshot.child("Fruits").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Food and Drink").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
                             PCategory.setText("Category: Food and Drinks");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
-                    for(DataSnapshot dataSnapshot : snapshot.child("Electronics").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Lighting and Sound").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
                             PCategory.setText("Category: Lighting and Sound");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
 
-                    for(DataSnapshot dataSnapshot : snapshot.child("Meats").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Party Extras").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
                             PCategory.setText("Category: Party Extras");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
 
-                    for(DataSnapshot dataSnapshot : snapshot.child("Vegetables").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Photography and Tech").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
                             PCategory.setText("Category: Photography and Tech");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
@@ -362,22 +362,22 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
         else if(id == R.id.MyOrders){
             startActivity(new Intent(ProductInfoActivity.this, OrderActivity.class));
         }
-        else if(id==R.id.fruits){
+        else if(id==R.id.food){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
-        else if(id==R.id.vegetables){
+        else if(id==R.id.lighting){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
-        else if(id==R.id.meats){
+        else if(id==R.id.party){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
-        else if(id==R.id.electronics){
+        else if(id==R.id.photography){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);

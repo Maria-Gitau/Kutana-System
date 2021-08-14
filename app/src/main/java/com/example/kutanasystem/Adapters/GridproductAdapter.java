@@ -65,7 +65,7 @@ public class GridproductAdapter extends BaseAdapter {
             checkBox = view.findViewById(R.id.check_box);
             //Picasso.get().load(horizontalProductModelList.get(position).getProductimage()).into(productImage);
             //producttitle.setText(horizontalProductModelList.get(position).getProducttitle());
-           // productprice.setText("KES " + horizontalProductModelList.get(position).getProductprice());
+            //productprice.setText("KES " + horizontalProductModelList.get(position).getProductprice());
             boolean isfavourite = false;
             for (int i = 0; i < favourites.size(); i++) {
                 if (horizontalProductModelList.get(position).getProducttitle().equals(favourites.get(i).getProducttitle())) {

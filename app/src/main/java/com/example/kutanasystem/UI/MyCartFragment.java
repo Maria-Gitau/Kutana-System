@@ -205,7 +205,7 @@ public class MyCartFragment extends Fragment {
 
                     }
                     root.child("cart").child(CurrentUser).child("totalPrice").setValue(String.valueOf(totalpriceVal));
-                    totalprice.setText(String.valueOf(totalpriceVal)+" EGP");
+                    totalprice.setText(String.valueOf(totalpriceVal)+" KES");
                     cartAdapter.notifyDataSetChanged();
                 }
             }

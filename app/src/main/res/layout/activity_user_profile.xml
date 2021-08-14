@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/ProfileCover"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:src="@drawable/headerbackground"
             android:scaleX="1.5"/>
 

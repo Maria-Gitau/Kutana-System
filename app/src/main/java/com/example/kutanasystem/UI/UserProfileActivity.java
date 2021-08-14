@@ -147,24 +147,24 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         else if(id == R.id.MyOrders){
             startActivity(new Intent(UserProfileActivity.this, OrderActivity.class));
         }
-        else if(id==R.id.fruits){
+        else if(id==R.id.food){
             Intent intent =new Intent(UserProfileActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Fruits");
+            intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
-        else if(id==R.id.vegetables){
+        else if(id==R.id.lighting){
             Intent intent =new Intent(UserProfileActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Vegetables");
+            intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
-        else if(id==R.id.meats){
+        else if(id==R.id.party){
             Intent intent =new Intent(UserProfileActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Meats");
+            intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
-        else if(id==R.id.electronics){
+        else if(id==R.id.photography){
             Intent intent =new Intent(UserProfileActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Electronics");
+            intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);
         }
         else if(id==R.id.Logout){

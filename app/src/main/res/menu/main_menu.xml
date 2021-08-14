@@ -26,18 +26,18 @@
     <item android:title="Categories">
         <menu>
             <item
-                android:id="@+id/fruits"
-                android:title="Food and Drinks" />
+                android:id="@+id/food"
+                android:title="     Food and Drinks" />
             <item
-                android:id="@+id/vegetables"
-                android:title="Lighting and Sound" />
+                android:id="@+id/lighting"
+                android:title="     Lighting and Sound" />
 
             <item
-                android:id="@+id/meats"
-                android:title="Party Extras" />
+                android:id="@+id/party"
+                android:title="     Party Extras" />
             <item
-                android:id="@+id/electronics"
-                android:title="Photography and Tech" />
+                android:id="@+id/photography"
+                android:title="     Photography and Tech" />
         </menu>
     </item>
     <item android:title="@string/logout">

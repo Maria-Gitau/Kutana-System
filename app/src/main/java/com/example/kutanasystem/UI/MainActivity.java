@@ -103,16 +103,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Retrieve_fav();
 
         // FirstView
-        Retrieve_Electroncis();
+        Retrieve_photography();
 
         // SecondView
-        Retrieve_Fruits();
+        Retrieve_food();
 
         //Third View
-        Retrieve_Meats();
+        Retrieve_party();
 
         // Fourth View
-        Retrieve_Vegatables();
+        Retrieve_lighting();
 
         // OFFERS
         Retrieve_offers();
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         HandleTotalPriceToZeroIfNotExist();
     }
 
-    public void Retrieve_Electroncis() {
+    public void Retrieve_photography() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Electronics");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Photography and Tech");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ref.addListenerForSingleValueEvent(eventListener);
     }
 
-    public void Retrieve_Fruits() {
+    public void Retrieve_food() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView2);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Fruits");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Food and Drinks");
         ValueEventListener eventListener = new ValueEventListener() {
 
             @Override
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
-    public void Retrieve_Meats() {
+    public void Retrieve_party() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView3);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
@@ -238,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Meats");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Party Extras");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public void Retrieve_Vegatables() {
+    public void Retrieve_lighting() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView4);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
@@ -279,7 +279,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Vegetables");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Lighting and Sound");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -358,22 +358,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(id == R.id.MyOrders){
             startActivity(new Intent(MainActivity.this, OrderActivity.class));
         }
-        else if(id==R.id.fruits){
+        else if(id==R.id.food){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Food and Drinks");
             startActivity(intent);
         }
-        else if(id==R.id.vegetables){
+        else if(id==R.id.lighting){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Lighting and Sound");
             startActivity(intent);
         }
-        else if(id==R.id.meats){
+        else if(id==R.id.party){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Party Extras");
             startActivity(intent);
         }
-        else if(id==R.id.electronics){
+        else if(id==R.id.photography){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
             intent.putExtra("Category Name","Photography and Tech");
             startActivity(intent);
