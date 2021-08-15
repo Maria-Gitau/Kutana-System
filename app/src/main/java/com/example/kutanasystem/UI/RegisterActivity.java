@@ -125,6 +125,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 uId = currentUser.getUid();
                                 DatabaseReference z = FirebaseDatabase.getInstance().getReference().child("users");
                                 z.child(uId).setValue(hashMap);
+                                currentUser.sendEmailVerification();
 
                                 if (ResultURI != null) UploadImageInStorageDataBase(ResultURI);
 
