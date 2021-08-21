@@ -131,22 +131,22 @@ public class CartActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id==R.id.food){
             Intent intent =new Intent(CartActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Food and Drinks");
+            intent.putExtra("Category Name","Food");
             startActivity(intent);
         }
         else if(id==R.id.lighting){
             Intent intent =new Intent(CartActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Lighting and Sound");
+            intent.putExtra("Category Name","Lighting");
             startActivity(intent);
         }
         else if(id==R.id.party){
             Intent intent =new Intent(CartActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Party Extras");
+            intent.putExtra("Category Name","Party");
             startActivity(intent);
         }
         else if(id==R.id.photography){
             Intent intent =new Intent(CartActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Photography and Tech");
+            intent.putExtra("Category Name","Photography");
             startActivity(intent);
         }
         else if(id==R.id.Logout){

@@ -95,7 +95,7 @@ public class My_Adapter extends PagerAdapter {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    for(DataSnapshot dataSnapshot : snapshot.child("Food and Drinks").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Food").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductNamee)){
                             ProductName = ProductNamee;
                             ProductPrice=dataSnapshot.child("price").getValue().toString();
@@ -103,16 +103,7 @@ public class My_Adapter extends PagerAdapter {
                             ProductNExpiryDate= dataSnapshot.child("expired").getValue().toString();
                             break;}
                     }
-                    for(DataSnapshot dataSnapshot : snapshot.child("Lighting and Sound").getChildren()){
-                        if(dataSnapshot.getKey().equals(ProductNamee)){
-                            ProductName = ProductNamee;
-                            ProductPrice=dataSnapshot.child("price").getValue().toString();
-                            ProductImage=dataSnapshot.child("image").getValue().toString();
-                            ProductNExpiryDate= dataSnapshot.child("expired").getValue().toString();
-                            break;}
-                    }
-
-                    for(DataSnapshot dataSnapshot : snapshot.child("Party Extras").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Lighting").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductNamee)){
                             ProductName = ProductNamee;
                             ProductPrice=dataSnapshot.child("price").getValue().toString();
@@ -121,7 +112,16 @@ public class My_Adapter extends PagerAdapter {
                             break;}
                     }
 
-                    for(DataSnapshot dataSnapshot : snapshot.child("Photography and Tech").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Party").getChildren()){
+                        if(dataSnapshot.getKey().equals(ProductNamee)){
+                            ProductName = ProductNamee;
+                            ProductPrice=dataSnapshot.child("price").getValue().toString();
+                            ProductImage=dataSnapshot.child("image").getValue().toString();
+                            ProductNExpiryDate= dataSnapshot.child("expired").getValue().toString();
+                            break;}
+                    }
+
+                    for(DataSnapshot dataSnapshot : snapshot.child("Photography").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductNamee)){
                             ProductName = ProductNamee;
                             ProductPrice=dataSnapshot.child("price").getValue().toString();

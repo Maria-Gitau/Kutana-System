@@ -91,13 +91,13 @@ public class EditProduct extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
 
-        if (b.getString("category").equals("Food and Drinks"))
+        if (b.getString("category").equals("Food"))
             spinner.setSelection(0);
-        else if (b.getString("category").equals("Lighting and Sound"))
+        else if (b.getString("category").equals("Lighting"))
             spinner.setSelection(1);
-        else if (b.getString("category").equals("Party Extras"))
+        else if (b.getString("category").equals("Party"))
             spinner.setSelection(2);
-        else if (b.getString("category").equals("Photography and Tech"))
+        else if (b.getString("category").equals("Photography"))
             spinner.setSelection(3);
 
 

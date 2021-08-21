@@ -238,19 +238,19 @@ public class CategoryActivity extends AppCompatActivity implements NavigationVie
             startActivity(new Intent(CategoryActivity.this, favourites_activity.class));
         }
         else if(id==R.id.food){
-            CategoryName = "Food and Drinks";
+            CategoryName = "Food";
             setCategoryData();
         }
         else if(id==R.id.lighting){
-            CategoryName = "Lighting and Sound";
+            CategoryName = "Lighting";
             setCategoryData();
         }
         else if(id==R.id.party){
-            CategoryName = "Party Extras";
+            CategoryName = "Party";
             setCategoryData();
         }
         else if(id==R.id.photography){
-            CategoryName = "Photography and Tech";
+            CategoryName = "Photography";
             setCategoryData();
         }
         else if(id==R.id.Logout){

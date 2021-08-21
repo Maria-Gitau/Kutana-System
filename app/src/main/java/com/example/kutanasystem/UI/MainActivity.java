@@ -103,16 +103,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Retrieve_fav();
 
         // FirstView
-        Retrieve_photography();
+        Retrieve_Photography();
 
         // SecondView
-        Retrieve_food();
+        Retrieve_Food();
 
         //Third View
-        Retrieve_party();
+        Retrieve_Party();
 
         // Fourth View
-        Retrieve_lighting();
+        Retrieve_Lighting();
 
         // OFFERS
         Retrieve_offers();
@@ -124,18 +124,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         HandleTotalPriceToZeroIfNotExist();
     }
 
-    public void Retrieve_photography() {
+    public void Retrieve_Photography() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Photography and Tech");
+        gridlayouttitle.setText("Photography");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Photography and Tech");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Photography");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Photography and Tech");
+                intent.putExtra("Category Name","Photography");
                 startActivity(intent);
             }
         });
@@ -186,18 +186,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ref.addListenerForSingleValueEvent(eventListener);
     }
 
-    public void Retrieve_food() {
+    public void Retrieve_Food() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView2);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Food and Drinks");
+        gridlayouttitle.setText("Food");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Food and Drinks");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Food");
         ValueEventListener eventListener = new ValueEventListener() {
 
             @Override
@@ -221,24 +221,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Food and Drinks");
+                intent.putExtra("Category Name","Food");
                 startActivity(intent);
             }
         });
     }
 
-    public void Retrieve_party() {
+    public void Retrieve_Party() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView3);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Party Extras");
+        gridlayouttitle.setText("Party");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Party Extras");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Party");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -261,25 +261,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Party Extras");
+                intent.putExtra("Category Name","Party");
                 startActivity(intent);
             }
         });
 
     }
 
-    public void Retrieve_lighting() {
+    public void Retrieve_Lighting() {
         LinearLayout mylayout = (LinearLayout) findViewById(R.id.my_cardView4);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.grid_product_layout, mylayout, false);
         TextView gridlayouttitle = mylayout.findViewById(R.id.grid_product_layout_textview);
-        gridlayouttitle.setText("Lighting and Sound");
+        gridlayouttitle.setText("Lighting");
         Button GridLayoutViewBtn = mylayout.findViewById(R.id.grid_button_layout_viewall_button);
         final GridView gv = mylayout.findViewById(R.id.product_layout_gridview);
         final List<HorizontalProductModel> lastmodels = new ArrayList<>();
         final GridproductAdapter my_adapter;
         my_adapter = new GridproductAdapter(lastmodels, favourites,MainActivity.this);
-        m = FirebaseDatabase.getInstance().getReference().child("product").child("Lighting and Sound");
+        m = FirebaseDatabase.getInstance().getReference().child("product").child("Lighting");
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CategoryActivity.class);
-                intent.putExtra("Category Name","Lighting and Sound");
+                intent.putExtra("Category Name","Lighting");
                 startActivity(intent);
             }
         });
@@ -360,22 +360,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id==R.id.food){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Food and Drinks");
+            intent.putExtra("Category Name","Food");
             startActivity(intent);
         }
         else if(id==R.id.lighting){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Lighting and Sound");
+            intent.putExtra("Category Name","Lighting");
             startActivity(intent);
         }
         else if(id==R.id.party){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Party Extras");
+            intent.putExtra("Category Name","Party");
             startActivity(intent);
         }
         else if(id==R.id.photography){
             Intent intent =new Intent(MainActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Photography and Tech");
+            intent.putExtra("Category Name","Photography");
             startActivity(intent);
         }
         else if (id == R.id.Logout) {

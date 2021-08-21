@@ -261,29 +261,29 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    for(DataSnapshot dataSnapshot : snapshot.child("Food and Drink").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Food").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Food and Drinks");
+                            PCategory.setText("Category: Food");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
-                    for(DataSnapshot dataSnapshot : snapshot.child("Lighting and Sound").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Photography").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Lighting and Sound");
-                            PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
-                            break;}
-                    }
-
-                    for(DataSnapshot dataSnapshot : snapshot.child("Party Extras").getChildren()){
-                        if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Party Extras");
+                            PCategory.setText("Category: Photography");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
 
-                    for(DataSnapshot dataSnapshot : snapshot.child("Photography and Tech").getChildren()){
+                    for(DataSnapshot dataSnapshot : snapshot.child("Party").getChildren()){
                         if(dataSnapshot.getKey().equals(ProductName)){
-                            PCategory.setText("Category: Photography and Tech");
+                            PCategory.setText("Category: Party");
+                            PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
+                            break;}
+                    }
+
+                    for(DataSnapshot dataSnapshot : snapshot.child("Lighting").getChildren()){
+                        if(dataSnapshot.getKey().equals(ProductName)){
+                            PCategory.setText("Category: Lighting");
                             PAmount.setText("Available Amounts: "+dataSnapshot.child("quantity").getValue());
                             break;}
                     }
@@ -364,22 +364,22 @@ public class ProductInfoActivity extends AppCompatActivity implements Navigation
         }
         else if(id==R.id.food){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Food and Drinks");
+            intent.putExtra("Category Name","Food");
             startActivity(intent);
         }
         else if(id==R.id.lighting){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Lighting and Sound");
+            intent.putExtra("Category Name","Lighting");
             startActivity(intent);
         }
         else if(id==R.id.party){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Party Extras");
+            intent.putExtra("Category Name","Party");
             startActivity(intent);
         }
         else if(id==R.id.photography){
             Intent intent =new Intent(ProductInfoActivity.this,CategoryActivity.class);
-            intent.putExtra("Category Name","Photography and Tech");
+            intent.putExtra("Category Name","Photography");
             startActivity(intent);
         }
         else if(id==R.id.Logout){
