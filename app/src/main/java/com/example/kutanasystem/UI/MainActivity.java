@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     user my_user = new user();
                     my_user = ds.getValue(user.class);
                     my_user.setCategory(ds.getKey().toString());
-                    lastmodels.add(new HorizontalProductModel(my_user.getImage(), my_user.getCategory(), my_user.getPrice(), false,my_user.getExpired()));
+                    lastmodels.add(new HorizontalProductModel(my_user.getImage(), my_user.getCategory(), my_user.getPrice(), false, my_user.getExpired()));
                 }
                 gv.setAdapter(my_adapter);
             }

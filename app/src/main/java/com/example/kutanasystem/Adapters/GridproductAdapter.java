@@ -106,12 +106,12 @@ public class GridproductAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ProductInfoActivity.class);
-                intent.putExtra("Product Name",horizontalProductModelList.get(position).getProducttitle());
-                intent.putExtra("Product Price",horizontalProductModelList.get(position).getProductprice());
-                intent.putExtra("Product Image",horizontalProductModelList.get(position).getProductimage());
-                intent.putExtra("Product ExpiryDate",horizontalProductModelList.get(position).getExpiredDate());
-                intent.putExtra("Product IsFavorite",String.valueOf(horizontalProductModelList.get(position).isChecked()));
-                intent.putExtra("Is Offered","no");
+                intent.putExtra("Product Name", horizontalProductModelList.get(position).getProducttitle());
+                intent.putExtra("Product Price", horizontalProductModelList.get(position).getProductprice());
+                intent.putExtra("Product Image", horizontalProductModelList.get(position).getProductimage());
+                intent.putExtra("Product ExpiryDate", horizontalProductModelList.get(position).getExpiredDate());
+                intent.putExtra("Product IsFavorite", String.valueOf(horizontalProductModelList.get(position).isChecked()));
+                intent.putExtra("Is Offered", "no");
 
                 context.startActivity(intent);
             }

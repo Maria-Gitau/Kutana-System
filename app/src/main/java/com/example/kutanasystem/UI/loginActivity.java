@@ -85,7 +85,7 @@ public class loginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             if (Email.equals("admin@gmail.com") && Password.equals("password")) {
-                                Toast.makeText(loginActivity.this, "Welcome My Creator", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(loginActivity.this, "Welcome Vendor", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(loginActivity.this, AdminActivity.class));
                                 finish();
                             } else {

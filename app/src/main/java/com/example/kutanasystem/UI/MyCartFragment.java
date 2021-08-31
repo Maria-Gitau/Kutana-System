@@ -182,10 +182,6 @@ public class MyCartFragment extends Fragment {
         return  view;
     }
 
-
-
-
-
     public void accountTotalPrice(){
         totalpriceVal = 0;
         m = root.child("cart");

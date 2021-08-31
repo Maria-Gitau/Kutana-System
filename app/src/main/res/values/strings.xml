@@ -11,9 +11,9 @@
     <string name="Gmail_web_client_id">395485540295-8a6udlrhhhi2m9f8vracudrvpllh3lmk.apps.googleusercontent.com</string>
 
     <string-array name="productstypes">
-        <item>Food and Drinks</item>
-        <item>Lighting and Sound</item>
-        <item>Party Extras</item>
-        <item>Photography and Tech</item>
+        <item>Food</item>
+        <item>Lighting</item>
+        <item>Party</item>
+        <item>Photography</item>
     </string-array>
 </resources>
